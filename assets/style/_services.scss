@@ -1,0 +1,135 @@
+.services-main-container {
+  min-height: 100vh;
+  height: auto;
+  background-color: $dark-blue;
+  padding: 70px 0;
+}
+.services-sub-container {
+  height: auto;
+  padding: 30px 0;
+  //   background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.services-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.services-page-topic {
+  margin-bottom: 40px;
+}
+.service-container {
+  width: 415px;
+  height: 300px;
+  border-left: 1px solid rgba(255, 255, 255, 0.13);
+  border-right: 1px solid rgba(255, 255, 255, 0.13);
+  margin: 60px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.service-icon-container {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service-icon {
+  font-size: 40px;
+  color: $primary-color;
+}
+.service-name-container {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service-name {
+  font-family: $poppins;
+  color: white;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+.service-description-container {
+  width: 80%;
+  height: auto;
+}
+.service-description {
+  font-family: $poppins;
+  font-size: 18px;
+  font-weight: 400;
+  color: $dark-white;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+}
+.seo {
+  text-transform: uppercase !important;
+}
+@media (min-width: 1160px) and (max-width: 1440px) {
+  .service-container {
+    width: 335px;
+    height: 300px;
+  }
+}
+@media (max-width: 1440px) {
+  .service-icon {
+    font-size: 35px;
+  }
+  .service-name {
+    font-size: 18px;
+  }
+  .service-description {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1160px) {
+  .service-container {
+    // aspect-ratio: 67/60;
+    width: 45%;
+    min-width: 335px;
+    margin: 40px 0;
+  }
+  // .services-container {
+  //   justify-content: space-around;
+  // }
+}
+@media (max-width: 768px) {
+  .service-container {
+    // aspect-ratio: 67/60;
+    width: 100%;
+    margin: 25px 0;
+    // height: auto;
+  }
+}
+@media (max-width: 310px) {
+  .service-container {
+    aspect-ratio: 67/60;
+    width: 100%;
+    height: auto;
+    margin: 10vw 0;
+  }
+  .service-name {
+    font-size: 5vw;
+  }
+  .service-description {
+    font-size: 5vw;
+  }
+  .service-icon {
+    font-size: 7vw;
+  }
+}

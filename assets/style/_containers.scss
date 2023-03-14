@@ -1,0 +1,77 @@
+.main-container {
+  width: 100%;
+  // background-color: red;
+  position: relative;
+}
+.sub-container {
+  width: 90%;
+  max-width: 1444px;
+  //   min-width: 250px;
+  // background-color: red;
+  // margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+// @media (max-width: 1500px) {
+//   .sub-container {
+//     width: 95%;
+//   }
+// }
+.page-topic-container {
+  width: 100%;
+  height: auto;
+  // background-color: antiquewhite;
+}
+.page-topic {
+  margin: 0;
+  padding: 0;
+  font-family: $poppins;
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: $primary-color;
+  text-decoration-thickness: 2px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.default-btn {
+  width: 220px;
+  height: 40px;
+  background-color: $primary-color;
+  color: $dark-blue;
+  font-family: $poppins;
+  font-weight: 500;
+  font-size: 18px;
+  border: 2px solid $primary-color;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all ease-in-out 200ms;
+  &:hover {
+    // background-color: $primary-color-low;
+    // color: $dark-blue-low;
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+  }
+}
+@media (max-width: 1024px) {
+  .page-topic {
+    font-size: 23px;
+  }
+  .default-btn {
+    font-size: 16px;
+    width: 200px;
+    height: 35px;
+  }
+}
+@media (max-width: 310px) {
+  .page-topic {
+    font-size: 6.5vw;
+  }
+  .default-btn {
+    font-size: 6vw;
+    width: 70vw;
+  }
+}
