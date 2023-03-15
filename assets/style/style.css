@@ -862,6 +862,7 @@ html {
   height: 500px;
   background-color: transparent;
   position: relative;
+  overflow: hidden;
   z-index: 0;
 }
 .clients-main-container::before {
