@@ -81,7 +81,7 @@
   font-size: 30px;
   font-weight: 600;
   text-transform: lowercase;
-  padding: 0 3px 0 3px;
+  padding: 0 3px;
   margin: 0;
   text-decoration: none;
   border: 2px solid $dark-white;
@@ -328,5 +328,22 @@
   }
   .social-icon {
     font-size: 6vw;
+  }
+}
+@media (max-width: 310px) {
+  .navbar {
+    height: 20vw;
+  }
+  #hamburger-btn {
+    font-size: 8.5vw;
+  }
+  .logo {
+    font-size: 10vw;
+    padding: 0 0.5vw;
+    border: 1vw solid $dark-white;
+    border-radius: 2vw;
+  }
+  .nav-link {
+    font-size: 5vw;
   }
 }

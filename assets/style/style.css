@@ -3,11 +3,32 @@ html {
 }
 
 #body {
+  height: 100vh;
+  width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #13141a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(68, 100%, 70%);
+  border-radius: 10px;
+}
+
+@supports (scrollbar-color: hsl(68, 100%, 55%) #13141a) {
+  * {
+    scrollbar-color: hsl(68, 100%, 55%) #13141a;
+    scrollbar-width: auto;
+  }
+}
 #preloader {
   width: 100%;
   height: 100vh;
@@ -94,7 +115,7 @@ html {
   font-size: 30px;
   font-weight: 600;
   text-transform: lowercase;
-  padding: 0 3px 0 3px;
+  padding: 0 3px;
   margin: 0;
   text-decoration: none;
   border: 2px solid hsla(0, 0%, 100%, 0.72);
@@ -355,6 +376,23 @@ html {
   }
   .social-icon {
     font-size: 6vw;
+  }
+}
+@media (max-width: 310px) {
+  .navbar {
+    height: 20vw;
+  }
+  #hamburger-btn {
+    font-size: 8.5vw;
+  }
+  .logo {
+    font-size: 10vw;
+    padding: 0 0.5vw;
+    border: 1vw solid hsla(0, 0%, 100%, 0.72);
+    border-radius: 2vw;
+  }
+  .nav-link {
+    font-size: 5vw;
   }
 }
 .main-container {
@@ -925,7 +963,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .client-container {
@@ -934,7 +972,7 @@ html {
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   transition: all ease-in-out 500ms;
 }
@@ -1049,7 +1087,7 @@ html {
   background-color: hsl(68, 100%, 55%);
 }
 
-@media (min-width: 300px) and (max-width: 768px) {
+@media (min-width: 310px) and (max-width: 768px) {
   .client-pic-container {
     width: 120px;
     height: 120px;
@@ -1067,7 +1105,7 @@ html {
     margin: 30px 0;
   }
 }
-@media (max-width: 300px) {
+@media (max-width: 310px) {
   .client-pic-container {
     width: 40vw;
     height: 40vw;
@@ -1102,4 +1140,9 @@ html {
   .clients-sub-container {
     padding-top: 5.5vw;
   }
+}
+.portfolio-main-container {
+  height: calc(100vh - 80px);
+  background-color: #13141a;
+  padding-top: 80px;
 }/*# sourceMappingURL=style.css.map */
