@@ -446,6 +446,16 @@ html {
   color: hsl(68, 100%, 55%);
 }
 
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.test {
+  width: 100%;
+  height: 100vh;
+  background-color: #13141a;
+}
+
 @media (max-width: 1024px) {
   .page-topic {
     font-size: 23px;
@@ -794,11 +804,18 @@ html {
   height: 300px;
   border-left: 1px solid rgba(255, 255, 255, 0.13);
   border-right: 1px solid rgba(255, 255, 255, 0.13);
+  background-color: #13141a;
   margin: 60px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  cursor: alias;
+  transition: all ease-in-out 300ms;
+}
+.service-container:hover {
+  border-left: 1px solid hsl(68, 100%, 70%);
+  border-right: 1px solid hsl(68, 100%, 70%);
 }
 
 .service-icon-container {
@@ -1142,7 +1159,74 @@ html {
   }
 }
 .portfolio-main-container {
-  height: calc(100vh - 80px);
+  height: auto;
   background-color: #13141a;
   padding-top: 80px;
+}
+
+.portfolio-sub-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-content-container {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-filter-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+.portfolio-filter-btn {
+  border: 2px solid white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 0 20px;
+  background-color: transparent;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+}
+.portfolio-filter-btn:hover {
+  border: 2px solid hsl(68, 100%, 55%);
+  background-color: hsl(68, 100%, 55%);
+  color: #13141a;
+}
+
+.active-portfolio {
+  border: 2px solid hsl(68, 100%, 55%);
+  background-color: hsl(68, 100%, 55%);
+  color: #13141a;
+}
+
+.portfolio-bucket {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 330px);
+  grid-template-rows: repeat(2, 330px);
+  justify-content: space-between;
+  grid-row-gap: 50px;
+}
+
+.porfolio-bucket-pic-container {
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.portfolio-bucket-pic {
+  width: 100%;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */

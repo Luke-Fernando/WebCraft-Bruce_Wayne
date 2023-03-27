@@ -1,5 +1,79 @@
 .portfolio-main-container {
-  height: calc(100vh - 80px);
+  // height: calc(100vh - 80px);
+  height: auto;
   background-color: $dark-blue;
   padding-top: 80px;
 }
+.portfolio-sub-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.portfolio-content-container {
+  width: 100%;
+  height: auto;
+}
+.portfolio-filter-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  // background-color: red;
+  padding: 50px 0;
+}
+.portfolio-filter-btn {
+  border: 2px solid white;
+  font-family: $poppins;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 0 20px;
+  background-color: transparent;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+  &:hover {
+    border: 2px solid $primary-color;
+    background-color: $primary-color;
+    color: $dark-blue;
+  }
+}
+.active-portfolio {
+  border: 2px solid $primary-color;
+  background-color: $primary-color;
+  color: $dark-blue;
+}
+.portfolio-bucket {
+  width: 100%;
+  height: auto;
+  // height: calc((330px * 2) + 50px);
+  display: grid;
+  grid-template-columns: repeat(4, 330px);
+  grid-template-rows: repeat(2, 330px);
+  justify-content: space-between;
+  grid-row-gap: 50px;
+  // grid-auto-flow: dense;
+  // grid-auto-columns: 330px;
+  // grid-auto-rows: 330px;
+  // background-color: antiquewhite;
+  // transition: all ease-in-out 400ms;
+}
+.porfolio-bucket-pic-container {
+  // width: 330px;
+  // height: 330px;
+  overflow: hidden;
+  border-radius: 5px;
+  // margin: 20px 0;
+  // transition: all ease-in-out 400ms;
+}
+.portfolio-bucket-pic {
+  width: 100%;
+  height: auto;
+}
+// .frontend {
+//   display: none;
+// }
