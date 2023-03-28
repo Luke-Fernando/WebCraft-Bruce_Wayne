@@ -4,6 +4,8 @@ $(document).ready(function () {
   let clickedVal = "all";
   let classNames = [];
 
+  const detailsContainer = $(".portfolio-bucket-details-container");
+
   function filterPortfolio() {
     filterBtn.click(function () {
       if ($(this).val() !== clickedVal) {
@@ -22,5 +24,12 @@ $(document).ready(function () {
     });
   }
 
+  function showDetails() {
+    portfolioPic.hover(function () {
+      $(this).children(":nth-child(2)").fadeToggle(100);
+    });
+  }
+
   filterPortfolio();
+  // showDetails();
 });

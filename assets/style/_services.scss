@@ -1,5 +1,5 @@
 .services-main-container {
-  min-height: 100vh;
+  // min-height: 100vh;
   height: auto;
   background-color: $dark-blue;
   padding: 70px 0;
@@ -142,5 +142,8 @@
   }
   .services-main-container {
     padding: 20vw 0;
+  }
+  .services-sub-container {
+    padding: 9vw;
   }
 }

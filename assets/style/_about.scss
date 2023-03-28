@@ -18,13 +18,13 @@
 }
 .about-us-details-container {
   //   flex: 1;
-  //   background-color: aquamarine;
+  // background-color: aquamarine;
   width: 100%;
-  height: max-content;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .about-us-page-topic-container {
   padding-bottom: 40px;
@@ -47,9 +47,9 @@
   //   flex: 1;
   width: calc(100% - 450px);
   //   min-width: max-content;
-  //   background-color: brown;
-  min-height: 350px;
-  max-height: 450px;
+  // background-color: brown;
+  // min-height: 350px;
+  // max-height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -58,6 +58,7 @@
 .about-us-para-container {
   width: 100%;
   height: auto;
+  margin-bottom: 40px;
 }
 .about-us-para {
   font-family: $poppins;
@@ -71,17 +72,20 @@
 .about-us-skills-container {
   width: 100%;
   // height: max-content;
-  height: 80px;
+  // height: 80px;
+  height: auto;
   // background-color: chocolate;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
+  margin-bottom: 40px;
 }
 .about-us-skills-topic-container {
   width: 100%;
   height: max-content;
-  // padding-bottom: 15px;
+  margin-bottom: 20px;
+  // padding-bottom: 20px;
 }
 .about-us-skills-topic {
   font-family: $poppins;
@@ -95,13 +99,14 @@
 }
 .about-us-skills-list-container {
   width: 100%;
-  max-width: 600px;
+  // max-width: 600px;
   height: auto;
   // background-color: red;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 }
 .about-us-skill-container {
   width: max-content;
@@ -110,7 +115,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  // padding-right: 40px;
+  margin: 20px 40px 20px 0;
 }
 .about-us-skill-checkmark-container {
   width: 30px;
@@ -170,17 +175,17 @@
     color: $dark-blue;
   }
 }
-@media (min-width: 1024px) and (max-width: 1180px) {
-  .about-us-text-based-container {
-    min-height: 400px;
-  }
-}
+// @media (min-width: 1024px) and (max-width: 1180px) {
+//   .about-us-text-based-container {
+//     min-height: 400px;
+//   }
+// }
 @media (min-width: 870px) and (max-width: 1024px) {
   .about-us-text-based-container {
     // min-height: calc(100% - 20px);
-    // width: calc(100% - 350px);
-    flex: 1;
-    padding-left: 20px;
+    width: calc(100% - 370px);
+    // flex: 1;
+    // padding-left: 20px;
     // background-color: red;
   }
   .about-us-image-container {
@@ -216,6 +221,8 @@
 @media (max-width: 870px) {
   .about-us-details-container {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     // background-color: cadetblue;
   }
   .about-us-image-container {
@@ -230,7 +237,7 @@
   }
   .about-us-text-based-container {
     width: 100%;
-    min-height: 340px;
+    // min-height: 340px;
     // background-color: aquamarine;
     align-items: center;
   }
@@ -238,19 +245,25 @@
     text-align: center;
   }
   .about-us-skills-container {
-    margin: 25px 0;
+    // margin: 25px 0;
     align-items: center;
     // background-color: brown;
     height: auto;
   }
-  .about-us-skills-topic-container {
-    margin: 20px 0;
-  }
+  // .about-us-skills-topic-container {
+  //   margin-bottom: 20px;
+  //   // padding: 0;
+  //   // background-color: aqua;
+  // }
   .about-us-skills-topic {
     text-align: center;
   }
   .about-us-skill-container {
     margin-bottom: 20px;
+  }
+  .about-us-skills-list-container {
+    justify-content: center;
+    margin: 20px 0;
   }
 }
 @media (max-width: 450px) {
@@ -286,6 +299,8 @@
   .about-us-btn-contact-us {
     font-size: 6vw;
     width: 70vw;
+    min-height: 12vw;
+    height: 12vw;
   }
   .about-us-skill-checkmark-container {
     width: 11vw;
@@ -296,5 +311,34 @@
   }
   .about-us-container {
     padding: 20vw 0;
+  }
+  .about-us-page-topic-container {
+    padding-bottom: 12vw;
+  }
+  .about-us-image-container {
+    margin-bottom: 18vw;
+  }
+  .about-us-para-container {
+    margin-bottom: 12vw;
+  }
+
+  .about-us-skills-topic-container {
+    margin-bottom: 7vw;
+    // background-color: aqua;
+  }
+  .about-us-skills-topic {
+    font-size: 6vw;
+  }
+  .about-us-skill-container {
+    margin-bottom: 7vw;
+  }
+  .about-us-skills-list-container {
+    margin: 7vw 0;
+  }
+  .about-us-skills-container {
+    margin-bottom: 12vw;
+  }
+  .about-us-sub {
+    padding: 9vw 0;
   }
 }

@@ -473,6 +473,8 @@ html {
   .default-btn {
     font-size: 6vw;
     width: 70vw;
+    height: auto;
+    min-height: 12vw;
   }
 }
 .about-us-container {
@@ -495,12 +497,11 @@ html {
 
 .about-us-details-container {
   width: 100%;
-  height: -moz-max-content;
-  height: max-content;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .about-us-page-topic-container {
@@ -525,8 +526,6 @@ html {
 
 .about-us-text-based-container {
   width: calc(100% - 450px);
-  min-height: 350px;
-  max-height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -536,6 +535,7 @@ html {
 .about-us-para-container {
   width: 100%;
   height: auto;
+  margin-bottom: 40px;
 }
 
 .about-us-para {
@@ -550,17 +550,19 @@ html {
 
 .about-us-skills-container {
   width: 100%;
-  height: 80px;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
+  margin-bottom: 40px;
 }
 
 .about-us-skills-topic-container {
   width: 100%;
   height: -moz-max-content;
   height: max-content;
+  margin-bottom: 20px;
 }
 
 .about-us-skills-topic {
@@ -576,12 +578,12 @@ html {
 
 .about-us-skills-list-container {
   width: 100%;
-  max-width: 600px;
   height: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .about-us-skill-container {
@@ -592,6 +594,7 @@ html {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 20px 40px 20px 0;
 }
 
 .about-us-skill-checkmark-container {
@@ -654,15 +657,9 @@ html {
   color: #13141a;
 }
 
-@media (min-width: 1024px) and (max-width: 1180px) {
-  .about-us-text-based-container {
-    min-height: 400px;
-  }
-}
 @media (min-width: 870px) and (max-width: 1024px) {
   .about-us-text-based-container {
-    flex: 1;
-    padding-left: 20px;
+    width: calc(100% - 370px);
   }
   .about-us-image-container {
     aspect-ratio: 14/15;
@@ -696,6 +693,8 @@ html {
 @media (max-width: 870px) {
   .about-us-details-container {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .about-us-image-container {
     aspect-ratio: 14/15;
@@ -705,25 +704,24 @@ html {
   }
   .about-us-text-based-container {
     width: 100%;
-    min-height: 340px;
     align-items: center;
   }
   .about-us-para {
     text-align: center;
   }
   .about-us-skills-container {
-    margin: 25px 0;
     align-items: center;
     height: auto;
-  }
-  .about-us-skills-topic-container {
-    margin: 20px 0;
   }
   .about-us-skills-topic {
     text-align: center;
   }
   .about-us-skill-container {
     margin-bottom: 20px;
+  }
+  .about-us-skills-list-container {
+    justify-content: center;
+    margin: 20px 0;
   }
 }
 @media (max-width: 450px) {
@@ -757,6 +755,8 @@ html {
   .about-us-btn-contact-us {
     font-size: 6vw;
     width: 70vw;
+    min-height: 12vw;
+    height: 12vw;
   }
   .about-us-skill-checkmark-container {
     width: 11vw;
@@ -768,9 +768,35 @@ html {
   .about-us-container {
     padding: 20vw 0;
   }
+  .about-us-page-topic-container {
+    padding-bottom: 12vw;
+  }
+  .about-us-image-container {
+    margin-bottom: 18vw;
+  }
+  .about-us-para-container {
+    margin-bottom: 12vw;
+  }
+  .about-us-skills-topic-container {
+    margin-bottom: 7vw;
+  }
+  .about-us-skills-topic {
+    font-size: 6vw;
+  }
+  .about-us-skill-container {
+    margin-bottom: 7vw;
+  }
+  .about-us-skills-list-container {
+    margin: 7vw 0;
+  }
+  .about-us-skills-container {
+    margin-bottom: 12vw;
+  }
+  .about-us-sub {
+    padding: 9vw 0;
+  }
 }
 .services-main-container {
-  min-height: 100vh;
   height: auto;
   background-color: #13141a;
   padding: 70px 0;
@@ -917,6 +943,9 @@ html {
   }
   .services-main-container {
     padding: 20vw 0;
+  }
+  .services-sub-container {
+    padding: 9vw;
   }
 }
 .clients-main-container {
@@ -1219,14 +1248,121 @@ html {
   grid-template-rows: repeat(2, 330px);
   justify-content: space-between;
   grid-row-gap: 50px;
+  position: relative;
 }
 
 .porfolio-bucket-pic-container {
   overflow: hidden;
   border-radius: 5px;
+  position: relative;
+}
+.porfolio-bucket-pic-container:hover .portfolio-bucket-details-container {
+  opacity: 1;
+}
+.porfolio-bucket-pic-container:hover .portfolio-bucket-topic-container {
+  margin-top: 0;
+}
+.porfolio-bucket-pic-container:hover .portfolio-bucket-icons-container {
+  margin-bottom: 0;
 }
 
 .portfolio-bucket-pic {
   width: 100%;
   height: auto;
+}
+
+.portfolio-bucket-details-container {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: all ease-in-out 300ms;
+}
+
+.portfolio-bucket-details {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  cursor: alias;
+}
+
+.portfolio-bucket-topic-container {
+  width: 80%;
+  height: auto;
+  margin-top: -30px;
+  transition: all ease-in-out 300ms;
+}
+
+.portfolio-bucket-topic {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.portfolio-bucket-para-container {
+  width: 80%;
+  height: auto;
+  transition: all ease-in-out 300ms;
+}
+
+.portfolio-bucket-para {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0;
+  margin: 0;
+  color: hsla(0, 0%, 100%, 0.72);
+}
+
+.portfolio-bucket-icons-container {
+  width: 40%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: -30px;
+  transition: all ease-in-out 300ms;
+}
+
+.portfolio-bucket-icon {
+  font-size: 25px;
+  color: hsla(0, 0%, 100%, 0.72);
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+}
+.portfolio-bucket-icon:hover {
+  color: white;
+}
+
+@media (max-width: 1500px) {
+  .portfolio-bucket {
+    grid-template-columns: repeat(4, 280px);
+    grid-template-rows: repeat(2, 280px);
+    grid-row-gap: 30px;
+  }
+}
+@media (max-width: 1260px) {
+  .portfolio-bucket {
+    grid-template-columns: repeat(3, 330px);
+    grid-template-rows: repeat(3, 330px);
+    grid-row-gap: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */
