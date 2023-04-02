@@ -1244,10 +1244,11 @@ html {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(4, 330px);
-  grid-template-rows: repeat(2, 330px);
+  grid-template-columns: repeat(auto-fit, 330px);
+  grid-template-rows: repeat(auto-fit, 330px);
   justify-content: space-between;
   grid-row-gap: 50px;
+  grid-column-gap: 10px;
   position: relative;
 }
 
@@ -1350,19 +1351,4 @@ html {
 }
 .portfolio-bucket-icon:hover {
   color: white;
-}
-
-@media (max-width: 1500px) {
-  .portfolio-bucket {
-    grid-template-columns: repeat(4, 280px);
-    grid-template-rows: repeat(2, 280px);
-    grid-row-gap: 30px;
-  }
-}
-@media (max-width: 1260px) {
-  .portfolio-bucket {
-    grid-template-columns: repeat(3, 330px);
-    grid-template-rows: repeat(3, 330px);
-    grid-row-gap: 30px;
-  }
 }/*# sourceMappingURL=style.css.map */
