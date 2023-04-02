@@ -1246,8 +1246,7 @@ html {
   height: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-row-gap: 50px;
-  grid-column-gap: 10px;
+  grid-gap: 10px;
   position: relative;
 }
 
@@ -1298,7 +1297,7 @@ html {
 }
 
 .portfolio-bucket-topic-container {
-  width: 80%;
+  width: 100%;
   height: auto;
   margin-top: -30px;
   transition: all ease-in-out 300ms;
@@ -1316,7 +1315,7 @@ html {
 }
 
 .portfolio-bucket-para-container {
-  width: 80%;
+  width: 100%;
   height: auto;
   transition: all ease-in-out 300ms;
 }
@@ -1356,15 +1355,11 @@ html {
 @media (min-width: 768px) and (max-width: 1000px) {
   .portfolio-bucket {
     grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 50px;
-    grid-column-gap: 10px;
   }
 }
 @media (min-width: 375px) and (max-width: 768px) {
   .portfolio-bucket {
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 50px;
-    grid-column-gap: 10px;
   }
 }
 @media (min-width: 310px) and (max-width: 768px) {
@@ -1375,8 +1370,6 @@ html {
 @media (max-width: 375px) {
   .portfolio-bucket {
     grid-template-columns: repeat(1, 1fr);
-    grid-row-gap: 50px;
-    grid-column-gap: 10px;
   }
 }
 @media (max-width: 310px) {
@@ -1390,7 +1383,7 @@ html {
     color: #13141a;
   }
   .portfolio-bucket {
-    grid-row-gap: 10vw;
+    grid-gap: 5vw;
   }
   .portfolio-filter-container {
     padding: 10vw 0;
