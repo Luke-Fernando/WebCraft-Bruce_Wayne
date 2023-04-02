@@ -32,7 +32,7 @@
   color: white;
   border-radius: 5px;
   padding: 5px 10px;
-  margin: 0 20px;
+  margin: 5px 20px;
   background-color: transparent;
   text-transform: capitalize;
   cursor: pointer;
@@ -52,11 +52,9 @@
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 330px);
-  grid-template-rows: repeat(auto-fit, 330px);
-  justify-content: space-between;
+  grid-template-columns: repeat(4, 1fr);
   grid-row-gap: min(50px);
-  grid-column-gap: min(10px);
+  grid-column-gap: 10px;
   // background-color: antiquewhite;
   position: relative;
   // transition: all ease-in-out 400ms;
@@ -67,6 +65,7 @@
   overflow: hidden;
   border-radius: 5px;
   position: relative;
+  aspect-ratio: 1/1;
   // margin: 20px 0;
   // transition: all ease-in-out 400ms;
   &:hover {
@@ -162,17 +161,51 @@
     color: white;
   }
 }
-// @media (max-width: 1500px) {
-//   .portfolio-bucket {
-//     grid-template-columns: repeat(4, 280px);
-//     grid-template-rows: repeat(2, 280px);
-//     grid-row-gap: 30px;
-//   }
-// }
-// @media (max-width: 1260px) {
-//   .portfolio-bucket {
-//     grid-template-columns: repeat(3, 330px);
-//     grid-template-rows: repeat(3, 330px);
-//     grid-row-gap: 30px;
-//   }
-// }
+@media (min-width: 768px) and (max-width: 1000px) {
+  .portfolio-bucket {
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: min(50px);
+    grid-column-gap: 10px;
+  }
+}
+@media (min-width: 375px) and (max-width: 768px) {
+  .portfolio-bucket {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: min(50px);
+    grid-column-gap: 10px;
+  }
+}
+@media (min-width: 310px) and (max-width: 768px) {
+  .portfolio-filter-btn {
+    font-size: 15px;
+  }
+}
+@media (max-width: 375px) {
+  .portfolio-bucket {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: min(50px);
+    grid-column-gap: 10px;
+  }
+}
+@media (max-width: 310px) {
+  .portfolio-filter-btn {
+    font-size: 5vw;
+    margin: 2vw 5vw;
+
+    &:hover {
+      border: 2px solid $primary-color;
+      background-color: $primary-color;
+      color: $dark-blue;
+    }
+  }
+  .portfolio-bucket {
+    grid-row-gap: min(10vw);
+  }
+  .portfolio-filter-container {
+    // background-color: red;
+    padding: 10vw 0;
+  }
+  .portfolio-main-container {
+    padding-top: 30vw;
+  }
+}

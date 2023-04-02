@@ -380,6 +380,7 @@ html {
 }
 @media (max-width: 310px) {
   .navbar {
+    width: 100%;
     height: 20vw;
   }
   #hamburger-btn {
@@ -945,7 +946,7 @@ html {
     padding: 20vw 0;
   }
   .services-sub-container {
-    padding: 9vw;
+    padding: 9vw 0;
   }
 }
 .clients-main-container {
@@ -1222,7 +1223,7 @@ html {
   color: white;
   border-radius: 5px;
   padding: 5px 10px;
-  margin: 0 20px;
+  margin: 5px 20px;
   background-color: transparent;
   text-transform: capitalize;
   cursor: pointer;
@@ -1244,9 +1245,7 @@ html {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 330px);
-  grid-template-rows: repeat(auto-fit, 330px);
-  justify-content: space-between;
+  grid-template-columns: repeat(4, 1fr);
   grid-row-gap: 50px;
   grid-column-gap: 10px;
   position: relative;
@@ -1256,6 +1255,7 @@ html {
   overflow: hidden;
   border-radius: 5px;
   position: relative;
+  aspect-ratio: 1/1;
 }
 .porfolio-bucket-pic-container:hover .portfolio-bucket-details-container {
   opacity: 1;
@@ -1351,4 +1351,51 @@ html {
 }
 .portfolio-bucket-icon:hover {
   color: white;
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .portfolio-bucket {
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 50px;
+    grid-column-gap: 10px;
+  }
+}
+@media (min-width: 375px) and (max-width: 768px) {
+  .portfolio-bucket {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 50px;
+    grid-column-gap: 10px;
+  }
+}
+@media (min-width: 310px) and (max-width: 768px) {
+  .portfolio-filter-btn {
+    font-size: 15px;
+  }
+}
+@media (max-width: 375px) {
+  .portfolio-bucket {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 50px;
+    grid-column-gap: 10px;
+  }
+}
+@media (max-width: 310px) {
+  .portfolio-filter-btn {
+    font-size: 5vw;
+    margin: 2vw 5vw;
+  }
+  .portfolio-filter-btn:hover {
+    border: 2px solid hsl(68, 100%, 55%);
+    background-color: hsl(68, 100%, 55%);
+    color: #13141a;
+  }
+  .portfolio-bucket {
+    grid-row-gap: 10vw;
+  }
+  .portfolio-filter-container {
+    padding: 10vw 0;
+  }
+  .portfolio-main-container {
+    padding-top: 30vw;
+  }
 }/*# sourceMappingURL=style.css.map */
