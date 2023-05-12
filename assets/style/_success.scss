@@ -1,0 +1,77 @@
+.suc-body {
+  width: 100vw;
+  height: 100vh;
+  background-color: $dark-blue;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.success-main-container {
+  width: 600px;
+  height: 500px;
+  background-color: $dark-blue-high;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 20px 20px 60px #0e0e13, -20px -20px 60px #181a21;
+  &:hover {
+    .success-icon {
+      color: $primary-color;
+    }
+  }
+}
+.success-icon-container {
+  width: auto;
+  height: auto;
+  // background-color: $dark-blue-high;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // border-radius: 50%;
+  margin-bottom: 30px;
+}
+.success-icon {
+  font-size: 70px;
+  color: $primary-color-low;
+  transition: all ease-in-out 300ms;
+}
+.success-msg {
+  font-family: $poppins;
+  font-size: 50px;
+  color: white;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  text-transform: capitalize;
+}
+.success-para {
+  font-family: $poppins;
+  font-size: 18px;
+  font-weight: 500;
+  color: $dark-white;
+  margin: 0 0 50px 0;
+  text-transform: capitalize;
+}
+.return-link {
+  text-decoration: none;
+}
+.return-btn {
+  width: 250px;
+  height: 40px;
+  background-color: $dark-blue-low;
+  border: none;
+  border-radius: 5px;
+  font-family: $poppins;
+  font-weight: 600;
+  font-size: 25px;
+  color: $dark-white;
+  text-transform: capitalize;
+  transition: all ease-in-out 300ms;
+  cursor: pointer;
+  &:hover {
+    color: $dark-blue;
+    background-color: $primary-color;
+  }
+}

@@ -1,12 +1,6 @@
 .header {
   height: 100vh;
   min-height: 600px;
-  // overflow: auto;
-  // position: relative;
-  // display: block;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 }
 .hero-img {
   width: 100%;
@@ -46,6 +40,7 @@
 .navbar {
   height: 70px;
   position: fixed !important;
+  width: 100%;
   // background-color: $dark-blue;
   display: flex;
   justify-content: center;
@@ -57,15 +52,15 @@
 }
 .navbar-sub-container {
   height: 100%;
-  //   background-color: red;
+  // background-color: red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  // position: fixed;
-  //   top: 0;
-  //   left: 50%;
-  //   transform: translateX(-50%);
+  // position: absolute;
+  // top: 0;
+  // left: 50%;
+  // transform: translateX(-50%);
 }
 .logo-container {
   height: 100%;
@@ -91,7 +86,7 @@
 .nav-links-container {
   height: 100%;
   width: max-content;
-  //   background-color: aqua;
+  // background-color: aqua;
 }
 .nav-links-list {
   list-style: none;
@@ -139,16 +134,19 @@
   font-size: 25px;
   color: white;
 }
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .nav-link-list {
-    margin: 0 0 0 30px;
+@media (max-width: 990px) {
+  .nav-links-container {
+    width: 80%;
   }
-  .nav-link {
-    font-size: 17px;
+  .nav-links-list {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav-link-list {
+    margin: 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .nav-links-container {
     display: none;
     // background-color: antiquewhite;
@@ -190,9 +188,6 @@
     // background-color: aquamarine;
     padding: 10px 0 10px 0;
   }
-  .logo {
-    font-size: 25px;
-  }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -207,7 +202,7 @@
   align-items: center;
 }
 .hero-text-container {
-  width: max-content;
+  width: 100%;
   height: auto;
   // background-color: red;
   display: flex;
@@ -308,45 +303,25 @@
   margin: 0;
 }
 
-@media (max-width: 615px) {
+@media (min-width: 575px) and (max-width: 990px) {
   .welcome-text {
-    font-size: 6vw;
+    font-size: 23px;
   }
   .name-text {
-    font-size: 11vw;
+    font-size: 58px;
   }
   .profession-text {
-    font-size: 6.5vw;
+    font-size: 28px;
   }
 }
-@media (max-width: 320px) {
-  .social-icon-btn {
-    width: 10vw;
-    height: 10vw;
-    margin: 0 2vw;
-    padding: 0;
+@media (max-width: 575px) {
+  .welcome-text {
+    font-size: 18px;
   }
-  .social-icon {
-    font-size: 6vw;
+  .name-text {
+    font-size: 40px;
   }
-}
-@media (max-width: 310px) {
-  .navbar {
-    width: 100%;
-    height: 20vw;
-  }
-  #hamburger-btn {
-    font-size: 8.5vw;
-    // padding: 0;
-    // margin: 0;
-  }
-  .logo {
-    font-size: 10vw;
-    padding: 0 0.5vw;
-    border: 1vw solid $dark-white;
-    border-radius: 2vw;
-  }
-  .nav-link {
-    font-size: 5vw;
+  .profession-text {
+    font-size: 20px;
   }
 }

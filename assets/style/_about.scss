@@ -58,12 +58,12 @@
 .about-us-para-container {
   width: 100%;
   height: auto;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 .about-us-para {
   font-family: $poppins;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 300;
   color: $dark-white;
   text-align: left;
   padding: 0;
@@ -90,7 +90,7 @@
 .about-us-skills-topic {
   font-family: $poppins;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   text-transform: capitalize;
   text-align: left;
@@ -104,7 +104,7 @@
   // background-color: red;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -115,7 +115,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 20px 40px 20px 0;
+  // margin: 20px 40px 20px 0;
 }
 .about-us-skill-checkmark-container {
   width: 30px;
@@ -136,7 +136,7 @@
 }
 .about-us-skill-name {
   font-family: $poppins;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   text-transform: none;
   color: white;
@@ -164,7 +164,7 @@
   background-color: transparent;
   font-family: $poppins;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   //   border: none;
   text-transform: uppercase;
   border-radius: 5px;
@@ -175,170 +175,31 @@
     color: $dark-blue;
   }
 }
-// @media (min-width: 1024px) and (max-width: 1180px) {
-//   .about-us-text-based-container {
-//     min-height: 400px;
-//   }
-// }
-@media (min-width: 870px) and (max-width: 1024px) {
-  .about-us-text-based-container {
-    // min-height: calc(100% - 20px);
-    width: calc(100% - 370px);
-    // flex: 1;
-    // padding-left: 20px;
-    // background-color: red;
-  }
-  .about-us-image-container {
-    aspect-ratio: 14/15;
-    max-width: 350px;
-    width: 100%;
-    // height: 360px;
-  }
-}
-@media (max-width: 1024px) {
-  .about-us-para {
-    font-size: 16px;
-  }
-  .about-us-skills-topic {
-    font-size: 18px;
-  }
-  .about-us-skill-name {
-    font-size: 16px;
-  }
-  .about-us-skill-checkmark-container {
-    width: 25px;
-    height: 25px;
-  }
-  .about-us-skill-checkmark {
-    font-size: 18px;
-  }
-  .about-us-btn-contact-us {
-    font-size: 16px;
-    width: 200px;
-    height: 35px;
-  }
-}
-@media (max-width: 870px) {
+
+@media (max-width: 990px) {
   .about-us-details-container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // background-color: cadetblue;
   }
   .about-us-image-container {
-    // width: 100%;
-    // height: ;
-    // padding-bottom: 100%;
-    aspect-ratio: 14/15;
-    max-width: 400px;
     width: 100%;
-    // height: auto;
-    margin-bottom: 60px;
+    margin: 0 0 50px 0;
   }
   .about-us-text-based-container {
     width: 100%;
-    // min-height: 340px;
-    // background-color: aquamarine;
-    align-items: center;
-  }
-  .about-us-para {
-    text-align: center;
-  }
-  .about-us-skills-container {
-    // margin: 25px 0;
-    align-items: center;
-    // background-color: brown;
-    height: auto;
-  }
-  // .about-us-skills-topic-container {
-  //   margin-bottom: 20px;
-  //   // padding: 0;
-  //   // background-color: aqua;
-  // }
-  .about-us-skills-topic {
-    text-align: center;
-  }
-  .about-us-skill-container {
-    margin-bottom: 20px;
-  }
-  .about-us-skills-list-container {
-    justify-content: center;
-    margin: 20px 0;
   }
 }
-@media (max-width: 450px) {
-  .about-us-skills-list-container {
-    // flex-wrap: wrap;
-    // justify-content: space-between;
-    width: max-content;
-    // background-color: red;
+@media (max-width: 575px) {
+  .about-us-btns-container {
     flex-direction: column;
+    max-width: none;
     align-items: flex-start;
   }
-  .about-us-btns-container {
-    width: max-content;
-    height: auto;
-    flex-direction: column;
-    // background-color: red;
-  }
-  .about-us-text-based-container {
-    max-height: none;
-    height: auto;
-  }
-  .about-us-btn {
-    margin: 10px 0;
-  }
-}
-@media (max-width: 310px) {
-  .about-us-para {
-    font-size: 5vw;
-  }
-  .about-us-skill-name {
-    font-size: 5vw;
-  }
   .about-us-btn-contact-us {
-    font-size: 6vw;
-    width: 70vw;
-    min-height: 12vw;
-    height: 12vw;
-  }
-  .about-us-skill-checkmark-container {
-    width: 11vw;
-    height: 11vw;
-  }
-  .about-us-skill-checkmark {
-    font-size: 8vw;
-  }
-  .about-us-container {
-    padding: 20vw 0;
-  }
-  .about-us-page-topic-container {
-    padding-bottom: 12vw;
-  }
-  .about-us-image-container {
-    margin-bottom: 18vw;
-  }
-  .about-us-para-container {
-    margin-bottom: 12vw;
-  }
-
-  .about-us-skills-topic-container {
-    margin-bottom: 7vw;
-    // background-color: aqua;
-  }
-  .about-us-skills-topic {
-    font-size: 6vw;
+    margin-top: 20px;
   }
   .about-us-skill-container {
-    margin-bottom: 7vw;
-  }
-  .about-us-skills-list-container {
-    margin: 7vw 0;
-  }
-  .about-us-skills-container {
-    margin-bottom: 12vw;
-  }
-  .about-us-sub {
-    padding: 9vw 0;
+    margin: 5px 0;
   }
 }

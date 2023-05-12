@@ -5,12 +5,15 @@ $(document).ready(function () {
   let classNames = [];
 
   const detailsContainer = $(".portfolio-bucket-details-container");
+  const fullscreenContainer = $(
+    ".portfolio-bucket-pic-fullscreen-main-container"
+  );
 
   function filterPortfolio() {
     filterBtn.click(function () {
       if ($(this).val() !== clickedVal) {
         clickedVal = $(this).val();
-        console.log(clickedVal);
+        // console.log(clickedVal);
         portfolioPic.hide();
         $(this).addClass("active-portfolio");
         filterBtn.not(this).removeClass("active-portfolio");
@@ -29,6 +32,10 @@ $(document).ready(function () {
       $(this).children(":nth-child(2)").fadeToggle(100);
     });
   }
+
+  $(window).resize(function () {
+    console.log(fullscreenContainer.height());
+  });
 
   filterPortfolio();
   // showDetails();

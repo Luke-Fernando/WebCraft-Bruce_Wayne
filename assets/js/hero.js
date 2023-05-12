@@ -4,8 +4,8 @@ $(document).ready(function () {
   var marTop = 0;
   const prosCount = proContainer.children().length;
 
-  console.log(prosCount);
-  console.log(-45 * (prosCount - 2));
+  // console.log(prosCount);
+  // console.log(-45 * (prosCount - 2));
 
   setInterval(function () {
     if (marTop >= -45 * (prosCount - 2)) {

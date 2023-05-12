@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  console.log("clients ready");
+  // console.log("clients ready");
 
   const firstClient = $(".client-1");
   const secondClient = $(".client-2");
@@ -36,7 +36,7 @@ $(document).ready(function () {
         $(this).children().removeClass("active-client");
       });
     });
-    console.log("selector");
+    // console.log("selector");
   }
 
   selectClient(firstSelector, "0");

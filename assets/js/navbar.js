@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   $(window).scroll(function () {
     scrollHeight = $(window).scrollTop();
-    console.log(scrollHeight);
+    // console.log(scrollHeight);
 
     if (scrollHeight > 120) {
       navbar.css("background-color", "#13141a");

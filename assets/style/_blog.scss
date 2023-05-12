@@ -1,0 +1,140 @@
+.blog-main-container {
+  background-color: $dark-blue;
+  padding: 80px 0;
+}
+.blog-page-topic-container {
+  margin-bottom: 50px;
+}
+.blogs-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  // width: 400px;
+  width: calc((100% / 3) - 20px);
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.blog-img-container {
+  // width: 400px;
+  width: 100%;
+  aspect-ratio: 200/111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  // background-color: red;
+  margin-bottom: 20px;
+  &:hover {
+    .blog-img {
+      width: 120%;
+    }
+  }
+}
+.blog-img {
+  width: 100%;
+  transition: all ease-in-out 300ms;
+}
+.blog-title-container {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.blog-title {
+  font-family: $poppins;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  text-transform: capitalize;
+  margin: 0;
+  text-decoration: none;
+}
+.blog-details-container {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: $poppins;
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: 300;
+  cursor: alias;
+  margin-bottom: 10px;
+}
+.blog-date-container {
+  width: auto;
+  height: auto;
+  margin-right: 15px;
+}
+.blog-date {
+  color: $dark-white;
+  margin: 0;
+}
+.blog-author-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blog-author {
+  color: $dark-white;
+  margin: 0;
+}
+.blog-author-name {
+  color: $primary-color;
+  text-decoration: none;
+}
+.blog-para-container {
+  width: 90%;
+  // height: 130px;
+  height: auto;
+  // background-color: red;
+  cursor: alias;
+  margin-bottom: 10px;
+}
+.blog-para {
+  font-family: $poppins;
+  text-overflow: ellipsis;
+  font-weight: 300;
+  font-size: 15px;
+  color: $dark-white;
+  text-align: left;
+  margin: 0;
+}
+.read-more-link-container {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.read-more-link {
+  font-family: $poppins;
+  font-size: 15px;
+  font-weight: 400;
+  color: $dark-white;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all ease-in-out 300ms;
+  &:hover {
+    color: white;
+  }
+}
+@media (max-width: 990px) {
+  .blog-container {
+    width: 100%;
+  }
+}

@@ -5,8 +5,9 @@
   // scroll-snap-align: start;
 }
 .sub-container {
-  width: 90%;
-  max-width: 1444px;
+  // width: 90%;
+  // max-width: 1444px;
+  width: 1140px;
   //   min-width: 250px;
   // background-color: red;
   // margin: auto;
@@ -31,6 +32,7 @@
   font-size: 25px;
   font-weight: 500;
   text-decoration: underline;
+  text-underline-offset: 8px;
   text-decoration-color: $primary-color;
   text-decoration-thickness: 2px;
   text-align: center;
@@ -43,7 +45,7 @@
   color: $dark-blue;
   font-family: $poppins;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   border: 2px solid $primary-color;
   text-transform: uppercase;
   border-radius: 5px;
@@ -60,29 +62,44 @@
 .uppercase {
   text-transform: uppercase !important;
 }
-.test {
-  width: 100%;
-  height: 100vh;
-  background-color: $dark-blue;
-}
 @media (max-width: 1024px) {
   .page-topic {
     font-size: 23px;
   }
-  .default-btn {
-    font-size: 16px;
-    width: 200px;
-    height: 35px;
-  }
+  // .default-btn {
+  //   font-size: 16px;
+  //   width: 200px;
+  //   height: 35px;
+  // }
 }
 @media (max-width: 310px) {
   .page-topic {
     font-size: 6.5vw;
   }
-  .default-btn {
-    font-size: 6vw;
-    width: 70vw;
-    height: auto;
-    min-height: 12vw;
+  // .default-btn {
+  //   font-size: 6vw;
+  //   width: 70vw;
+  //   height: auto;
+  //   min-height: 12vw;
+  // }
+}
+@media (min-width: 990px) and (max-width: 1200px) {
+  .sub-container {
+    width: 960px;
+  }
+}
+@media (min-width: 770px) and (max-width: 990px) {
+  .sub-container {
+    width: 720px;
+  }
+}
+@media (min-width: 575px) and (max-width: 770px) {
+  .sub-container {
+    width: 540px;
+  }
+}
+@media (max-width: 575px) {
+  .sub-container {
+    width: 90%;
   }
 }
