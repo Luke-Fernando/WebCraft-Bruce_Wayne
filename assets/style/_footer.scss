@@ -1,0 +1,28 @@
+.footer-main-container {
+  height: auto;
+  background-color: #040404;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-sub-container {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.copyright-text {
+  font-family: $poppins;
+  color: $dark-white;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 25px 0;
+}
+@media (max-width: 375px) {
+  .copyright-text {
+    font-size: 4vw;
+    padding: 6vw 0;
+  }
+}
