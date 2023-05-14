@@ -1,6 +1,6 @@
 .clients-main-container {
   height: auto;
-  padding-top: 70px;
+  padding: 70px 0;
   background-color: transparent;
   position: relative;
   z-index: 0;
@@ -81,13 +81,13 @@
   // justify-content: space-between;
   justify-content: flex-start;
   align-items: center;
-  transition: all ease-in-out 500ms;
+  transition: all ease-in-out 300ms;
   // background-color: red;
   // border: 2px solid cadetblue;
 }
 .client-pic-container {
   width: 150px;
-  height: 150px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   margin: 50px 0;
   // background-color: brown;
@@ -109,7 +109,8 @@
 .client-review {
   font-family: $poppins;
   font-style: italic;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 400;
   color: $dark-white;
   text-align: center;
   padding: 0;
@@ -123,6 +124,7 @@
   justify-content: center;
   align-items: center;
   margin: 20px 0;
+  // background-color: red;
 }
 .client-name-container {
   width: max-content;
@@ -131,7 +133,7 @@
 }
 .client-name {
   font-family: $poppins;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.95);
   text-transform: capitalize;
@@ -146,7 +148,7 @@
 }
 .client-review-source {
   font-family: $poppins;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: $dark-white;
   text-transform: capitalize;
@@ -166,7 +168,7 @@
 }
 .client-selector {
   width: 30px;
-  height: 30px;
+  aspect-ratio: 1/1;
   // background-size: 50%;
   // border: none;
   // border-radius: 50%;
@@ -179,68 +181,75 @@
 }
 .client-selector-bg {
   width: 10px;
-  height: 10px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: white;
 }
 .active-client {
   background-color: $primary-color;
 }
-// .client-1 {
-//   margin-left: -100%;
-// }
-// @media (min-width: 310px) and (max-width: 768px) {
-//   .client-pic-container {
-//     width: 120px;
-//     height: 120px;
-//   }
-//   .client-review {
-//     font-size: 18px;
-//   }
-//   .client-name {
-//     font-size: 18px;
-//   }
-//   .client-review-source {
-//     font-size: 16px;
-//   }
-//   .client-pic-container {
-//     margin: 30px 0;
-//   }
-// }
-// @media (max-width: 310px) {
-//   .client-pic-container {
-//     width: 40vw;
-//     height: 40vw;
-//     margin: 3vw 0;
-//   }
-//   .client-review {
-//     font-size: 6vw;
-//   }
-//   .client-name {
-//     font-size: 6vw;
-//   }
-//   .client-review-source {
-//     font-size: 5.5vw;
-//   }
-//   .client-selectors-container {
-//     margin: 6vw 0;
-//   }
-//   .client-selector {
-//     width: 9vw;
-//     height: 9vw;
-//     // background-color: red;
-//   }
-//   .client-selector-bg {
-//     width: 60%;
-//     height: 60%;
-//   }
-//   .client-details-container {
-//     margin: 6vw 0;
-//   }
-//   .clients-main-container {
-//     padding-top: 20vw;
-//   }
-//   .clients-sub-container {
-//     padding-top: 5.5vw;
-//   }
-// }
+@media (min-width: 375px) and (max-width: 770px) {
+  .client-pic-container {
+    width: 130px;
+  }
+  .client-review {
+    font-size: 16px;
+  }
+  .client-name {
+    font-size: 16px;
+  }
+  .client-review-source {
+    font-size: 15px;
+  }
+  .client-pic-container {
+    margin: 45px 0;
+  }
+}
+@media (max-width: 375px) {
+  .clients-main-container {
+    padding: 18vw 0;
+  }
+  .clients-sub-container {
+    padding-top: 5vw;
+  }
+  .client-pic-container {
+    width: 35vw;
+  }
+  .client-review {
+    font-size: 4.3vw;
+  }
+  .client-name {
+    font-size: 4.3vw;
+  }
+  .client-review-source {
+    font-size: 4vw;
+  }
+  .client-pic-container {
+    margin: 15vw 0;
+  }
+  .client-review-container {
+    margin: 5vw 0;
+  }
+  .client-details-container {
+    margin: 5vw 0;
+  }
+  .client-name-container {
+    padding: 1vw 0;
+  }
+  .client-review-source-container {
+    padding: 1vw 0;
+  }
+  .client-selectors-container {
+    margin: 5vw 0;
+  }
+  // selector
+  .client-selectors-container {
+    margin: 5vw 0;
+  }
+  .client-selector {
+    width: 6vw;
+  }
+  .client-selector-bg {
+    width: 50%;
+  }
+}

@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 .services-page-topic {
@@ -28,14 +28,15 @@
 .service-container {
   // width: 415px;
   width: calc((100% / 3) - 20px);
-  height: 300px;
+  min-height: 250px;
+  height: auto;
   border-left: 1px solid rgba(255, 255, 255, 0.13);
   border-right: 1px solid rgba(255, 255, 255, 0.13);
   background-color: $dark-blue;
   margin: 60px 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   cursor: alias;
   transition: all ease-in-out 300ms;
@@ -51,6 +52,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px 0 40px 0;
 }
 .service-icon {
   font-size: 40px;
@@ -62,13 +64,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 .service-name {
   font-family: $poppins;
   color: white;
   text-transform: capitalize;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 400;
   padding: 0;
   margin: 0;
 }
@@ -78,8 +81,8 @@
 }
 .service-description {
   font-family: $poppins;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 300;
   color: $dark-white;
   text-align: center;
   padding: 0;
@@ -97,5 +100,36 @@
 @media (max-width: 770px) {
   .service-container {
     width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .services-main-container {
+    padding: 18vw 0;
+  }
+  .services-sub-container {
+    padding: 7vw 0;
+  }
+  .services-page-topic {
+    margin-bottom: 10vw;
+  }
+  .service-container {
+    min-height: 70vw;
+    margin: 15vw 0;
+    // background-color: red;
+  }
+  .service-icon-container {
+    margin: 5vw 0 10vw 0;
+  }
+  .service-icon {
+    font-size: 10vw;
+  }
+  .service-name-container {
+    margin-bottom: 7vw;
+  }
+  .service-name {
+    font-size: 4.5vw;
+  }
+  .service-description {
+    font-size: 4.3vw;
   }
 }

@@ -30,8 +30,8 @@
   padding-bottom: 40px;
 }
 .about-us-image-container {
-  aspect-ratio: 14/15;
   width: 420px;
+  aspect-ratio: 14/15;
   // height: 450px;
   overflow: hidden;
   display: flex;
@@ -119,7 +119,7 @@
 }
 .about-us-skill-checkmark-container {
   width: 30px;
-  height: 30px;
+  aspect-ratio: 1/1;
   background-color: $grayish-blue;
   display: flex;
   justify-content: center;
@@ -156,20 +156,30 @@
 // .about-us-btn-resume-download {
 //   margin-right: 20px;
 // }
+.about-us-btn-resume-download {
+  background-color: $primary-color;
+  color: $dark-blue;
+  border: 2px solid $primary-color;
+  &:hover {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+  }
+}
 .about-us-btn-contact-us {
-  width: 220px;
-  height: 40px;
+  // width: 220px;
+  // height: 40px;
   border: 2px solid $primary-color;
   color: $primary-color;
   background-color: transparent;
-  font-family: $poppins;
-  font-weight: 500;
-  font-size: 16px;
-  //   border: none;
-  text-transform: uppercase;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all ease-in-out 200ms;
+  // font-family: $poppins;
+  // font-weight: 500;
+  // font-size: 16px;
+  // //   border: none;
+  // text-transform: uppercase;
+  // border-radius: 5px;
+  // cursor: pointer;
+  // transition: all ease-in-out 200ms;
   &:hover {
     background-color: $primary-color;
     color: $dark-blue;
@@ -201,5 +211,51 @@
   }
   .about-us-skill-container {
     margin: 5px 0;
+  }
+}
+@media (max-width: 375px) {
+  .about-us-container {
+    padding: 18vw 0;
+  }
+  .about-us-sub {
+    padding: 7vw 0;
+  }
+  .about-us-page-topic-container {
+    padding-bottom: 10vw;
+  }
+  .about-us-image-container {
+    margin: 0 0 15vw 0;
+  }
+  .about-us-para-container {
+    margin-bottom: 7vw;
+  }
+  .about-us-para {
+    font-size: 4.3vw;
+    text-decoration: none;
+  }
+  .about-us-skill-checkmark-container {
+    width: 8vw;
+  }
+  .about-us-skills-container {
+    margin-bottom: 10vw;
+  }
+  .about-us-skills-topic-container {
+    margin-bottom: 5vw;
+    // padding-bottom: 20px;
+  }
+  .about-us-skills-topic {
+    font-size: 4.5vw;
+  }
+  .about-us-skill-container {
+    margin: 1vw 0;
+  }
+  .about-us-skill-checkmark {
+    font-size: 5vw;
+  }
+  .about-us-skill-name {
+    font-size: 4.3vw;
+  }
+  .about-us-btn-contact-us {
+    margin-top: 5vw;
   }
 }

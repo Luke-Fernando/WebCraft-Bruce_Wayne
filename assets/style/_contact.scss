@@ -1,7 +1,7 @@
 .contact-main-container {
   background-color: $dark-blue;
   height: auto;
-  padding: 80px 0;
+  padding: 70px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
 }
 .contact-page-topic-container {
   margin-bottom: 150px;
@@ -26,22 +27,18 @@
 }
 .contact-details-container {
   width: 100%;
-  // max-width: 1160px;
   height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .contact-detail-container {
-  // width: 350px;
-  width: calc(100% / 3);
-  height: 160px;
+  min-width: calc(100% / 3);
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  // background-color: antiquewhite;
-  //   border-bottom: 1px solid white;
   &:hover {
     .contact-detail-icon-container {
       background-color: $dark-blue-low;
@@ -53,7 +50,7 @@
 }
 .contact-detail-icon-container {
   width: 50px;
-  height: 50px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.2);
   display: flex;
@@ -73,7 +70,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  //   margin-bottom: 5px;
 }
 .contact-detail-method {
   font-family: $poppins;
@@ -99,7 +95,6 @@
 }
 .contact-form-container {
   width: 100%;
-  // max-width: 1160px;
   height: auto;
 }
 .contact-form {
@@ -124,18 +119,14 @@
 .customer-name {
   border: none;
   background-color: $dark-blue-high;
-  // width: 560px;
   width: 48%;
-  // width: 100%;
   height: 45px;
   margin-bottom: 20px;
 }
 .customer-email {
   border: none;
   background-color: $dark-blue-high;
-  // width: 560px;
   width: 48%;
-  // width: 100%;
   height: 45px;
   margin-bottom: 20px;
 }
@@ -146,19 +137,16 @@
   height: 250px;
 }
 .form-submit-btn {
-  width: 170px;
-  height: 40px;
   background-color: $primary-color;
   color: $dark-blue;
-  font-family: $poppins;
-  font-weight: 500;
-  font-size: 18px;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border: 2px solid $primary-color;
   margin-top: 70px;
-  margin-left: calc(100% - 170px);
+  margin-left: calc(100% - 220px);
+  &:hover {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+  }
 }
 @media (max-width: 990px) {
   .contact-page-topic-container {
@@ -168,12 +156,10 @@
     width: max-content;
     flex-direction: column;
     justify-content: center;
-    // background-color: red;
   }
   .contact-detail-container {
-    // width: 350px;
     width: 100%;
-    height: 160px;
+    min-height: 160px;
     margin: 10px 0;
   }
   .contact-form {
@@ -184,5 +170,52 @@
   }
   .customer-email {
     width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .contact-main-container {
+    padding: 18vw 0;
+  }
+  .contact-sub-container {
+    padding-top: 5vw;
+  }
+  .contact-page-topic-container {
+    margin-bottom: 20vw;
+  }
+  .contact-detail-container {
+    min-height: 40vw;
+    margin: 2vw 0;
+  }
+  .contact-detail-icon-container {
+    width: 13vw;
+    margin-bottom: 5vw;
+  }
+  .contact-detail-icon {
+    font-size: 7vw;
+  }
+  .contact-detail-method {
+    font-size: 4.3vw;
+  }
+  .contact-detail-text {
+    font-size: 4vw;
+  }
+  .input-common {
+    font-size: 4vw;
+    padding-left: 2vw;
+  }
+  .customer-name {
+    height: 12vw;
+    margin-bottom: 5vw;
+  }
+  .customer-email {
+    height: 12vw;
+    margin-bottom: 5vw;
+  }
+  .customer-msg {
+    height: 65vw;
+  }
+  .form-submit-btn {
+    margin-top: 16vw;
+    margin-left: calc(100% - 55vw);
   }
 }

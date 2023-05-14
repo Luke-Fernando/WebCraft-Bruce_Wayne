@@ -13,7 +13,7 @@
   top: 0;
   left: 0;
   background-attachment: fixed;
-  background-image: url("../images/test-bg-5.jpg");
+  background-image: url("../images/test-bg-3.jpg");
   // background-color: red;
   background-size: cover;
   background-repeat: no-repeat;
@@ -112,7 +112,7 @@
   margin: 0;
   color: white;
   font-family: $poppins;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   text-transform: capitalize;
   text-decoration: none;
@@ -186,7 +186,26 @@
   .nav-link {
     font-size: 16px;
     // background-color: aquamarine;
-    padding: 10px 0 10px 0;
+    padding: 10px 0;
+  }
+}
+@media (max-width: 375px) {
+  .navbar {
+    height: 18vw;
+  }
+  .logo {
+    font-size: 8vw;
+    padding: 0 0.5vw;
+  }
+  #hamburger-btn {
+    font-size: 7vw;
+  }
+  .nav-links-list {
+    padding: 5vw 0;
+  }
+  .nav-link {
+    font-size: 4.3vw;
+    padding: 2vw 0;
   }
 }
 
@@ -271,10 +290,11 @@
   display: flex;
   flex-direction: row;
   margin-top: 25px;
+  // background-color: red;
 }
 .social-icon-btn {
   width: 35px;
-  height: 35px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.253);
   margin: 0 10px 0 10px;
@@ -282,7 +302,7 @@
   &:hover {
     background-color: rgba(0, 0, 0, 0.5);
     .social-icon {
-      color: rgba(255, 255, 255, 0.75);
+      color: white;
     }
   }
 }
@@ -298,7 +318,7 @@
 }
 .social-icon {
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.5);
+  color: $dark-white;
   padding: 0;
   margin: 0;
 }
@@ -323,5 +343,30 @@
   }
   .profession-text {
     font-size: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .welcome-text {
+    font-size: 4.5vw;
+  }
+  .name-text {
+    font-size: 10vw;
+  }
+  .profession-text {
+    font-size: 5vw;
+  }
+  .social-icons-container {
+    width: 80%;
+    max-width: 250px;
+    justify-content: space-around;
+    margin-top: 6vw;
+  }
+  .social-icon-btn {
+    width: 10vw;
+    margin: 0;
+  }
+  .social-icon {
+    font-size: 4.5vw;
+    color: $dark-white;
   }
 }

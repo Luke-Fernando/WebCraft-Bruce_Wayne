@@ -2,7 +2,7 @@
   // height: calc(100vh - 80px);
   height: auto;
   background-color: $dark-blue;
-  padding: 80px 0 80px 0;
+  padding: 70px 0;
   // background-color: red;
   // display: none;
 }
@@ -10,6 +10,7 @@
   height: auto;
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
 }
 .portfolio-content-container {
   width: 100%;
@@ -28,7 +29,7 @@
 .portfolio-filter-btn {
   border: 2px solid white;
   font-family: $poppins;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   color: white;
   border-radius: 5px;
@@ -125,27 +126,12 @@
 .portfolio-bucket-topic {
   font-family: $poppins;
   font-size: 18px;
-  font-weight: 500;
-  text-align: center;
-  text-transform: capitalize;
-  padding: 0;
-  margin: 0;
-  color: white;
-}
-.portfolio-bucket-para-container {
-  width: 100%;
-  height: auto;
-  transition: all ease-in-out 300ms;
-}
-.portfolio-bucket-para {
-  font-family: $poppins;
-  font-size: 16px;
   font-weight: 400;
   text-align: center;
   text-transform: capitalize;
   padding: 0;
   margin: 0;
-  color: $dark-white;
+  color: white;
 }
 .portfolio-bucket-icons-container {
   width: 40%;
@@ -166,12 +152,10 @@
     color: white;
   }
 }
-// .portfolio-bucket-icon-expand {
-//   &:hover {
-//     font-size: 30px;
-//   }
-// }
-//portfolio fullscreen
+
+/* -------------------------------------------------------------------------- */
+/*                            portfolio fullscreen                            */
+/* -------------------------------------------------------------------------- */
 .portfolio-bucket-pic-fullscreen-main-container {
   width: 100%;
   height: 100vh;
@@ -411,11 +395,47 @@
     // grid-gap: 10px;
   }
 }
+@media (min-width: 375px) and (max-width: 575px) {
+  .portfolio-bucket-topic-container {
+    margin-top: -25px;
+  }
+  .portfolio-bucket-topic {
+    font-size: 16px;
+  }
+  .portfolio-bucket-icons-container {
+    margin-bottom: -25px;
+  }
+  .portfolio-bucket-icon {
+    font-size: 20px;
+  }
+}
 @media (max-width: 375px) {
+  .portfolio-main-container {
+    padding: 18vw 0;
+  }
+  .portfolio-sub-container {
+    padding-top: 5vw;
+  }
   .portfolio-bucket {
     grid-template-columns: repeat(1, 1fr);
     // grid-row-gap: min(50px);
     // grid-column-gap: 10px;
     // grid-gap: 10px;
+  }
+  .portfolio-filter-btn {
+    font-size: 4.3vw;
+    margin: 1vw 5vw;
+  }
+  .portfolio-bucket-topic-container {
+    margin-top: -5.5vw;
+  }
+  .portfolio-bucket-topic {
+    font-size: 5vw;
+  }
+  .portfolio-bucket-icons-container {
+    margin-bottom: -5.5vw;
+  }
+  .portfolio-bucket-icon {
+    font-size: 7vw;
   }
 }

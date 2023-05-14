@@ -1,3 +1,9 @@
+/* -------------------------------------------------------------------------- */
+/*                               color palatte 1                              */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               color palatte 2                              */
+/* -------------------------------------------------------------------------- */
 html {
   scroll-behavior: smooth;
 }
@@ -8,6 +14,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -59,7 +66,7 @@ html {
   top: 0;
   left: 0;
   background-attachment: fixed;
-  background-image: url("../images/test-bg-5.jpg");
+  background-image: url("../images/test-bg-3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 50%;
@@ -156,7 +163,7 @@ html {
   margin: 0;
   color: white;
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   text-transform: capitalize;
   text-decoration: none;
@@ -227,7 +234,26 @@ html {
   }
   .nav-link {
     font-size: 16px;
-    padding: 10px 0 10px 0;
+    padding: 10px 0;
+  }
+}
+@media (max-width: 375px) {
+  .navbar {
+    height: 18vw;
+  }
+  .logo {
+    font-size: 8vw;
+    padding: 0 0.5vw;
+  }
+  #hamburger-btn {
+    font-size: 7vw;
+  }
+  .nav-links-list {
+    padding: 5vw 0;
+  }
+  .nav-link {
+    font-size: 4.3vw;
+    padding: 2vw 0;
   }
 }
 /* -------------------------------------------------------------------------- */
@@ -326,7 +352,7 @@ html {
 
 .social-icon-btn {
   width: 35px;
-  height: 35px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.253);
   margin: 0 10px 0 10px;
@@ -336,7 +362,7 @@ html {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .social-icon-btn:hover .social-icon {
-  color: rgba(255, 255, 255, 0.75);
+  color: white;
 }
 
 .social-link {
@@ -352,7 +378,7 @@ html {
 
 .social-icon {
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.72);
   padding: 0;
   margin: 0;
 }
@@ -379,6 +405,31 @@ html {
     font-size: 20px;
   }
 }
+@media (max-width: 375px) {
+  .welcome-text {
+    font-size: 4.5vw;
+  }
+  .name-text {
+    font-size: 10vw;
+  }
+  .profession-text {
+    font-size: 5vw;
+  }
+  .social-icons-container {
+    width: 80%;
+    max-width: 250px;
+    justify-content: space-around;
+    margin-top: 6vw;
+  }
+  .social-icon-btn {
+    width: 10vw;
+    margin: 0;
+  }
+  .social-icon {
+    font-size: 4.5vw;
+    color: hsla(0, 0%, 100%, 0.72);
+  }
+}
 .main-container {
   width: 100%;
   position: relative;
@@ -403,7 +454,6 @@ html {
   font-size: 25px;
   font-weight: 500;
   text-decoration: underline;
-  text-underline-offset: 8px;
   text-decoration-color: hsl(68, 100%, 55%);
   text-decoration-thickness: 2px;
   text-align: center;
@@ -413,37 +463,19 @@ html {
 .default-btn {
   width: 220px;
   height: 40px;
-  background-color: hsl(68, 100%, 55%);
-  color: #13141a;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  border: 2px solid hsl(68, 100%, 55%);
   text-transform: uppercase;
   border-radius: 5px;
   cursor: pointer;
   transition: all ease-in-out 200ms;
-}
-.default-btn:hover {
-  background-color: transparent;
-  border: 2px solid hsl(68, 100%, 55%);
-  color: hsl(68, 100%, 55%);
 }
 
 .uppercase {
   text-transform: uppercase !important;
 }
 
-@media (max-width: 1024px) {
-  .page-topic {
-    font-size: 23px;
-  }
-}
-@media (max-width: 310px) {
-  .page-topic {
-    font-size: 6.5vw;
-  }
-}
 @media (min-width: 990px) and (max-width: 1200px) {
   .sub-container {
     width: 960px;
@@ -462,6 +494,21 @@ html {
 @media (max-width: 575px) {
   .sub-container {
     width: 90%;
+  }
+}
+@media (min-width: 375px) and (max-width: 575px) {
+  .page-topic {
+    font-size: 23px;
+  }
+}
+@media (max-width: 375px) {
+  .page-topic {
+    font-size: 6vw;
+  }
+  .default-btn {
+    width: 55vw;
+    height: 10vw;
+    font-size: 4.3vw;
   }
 }
 .about-us-container {
@@ -496,8 +543,8 @@ html {
 }
 
 .about-us-image-container {
-  aspect-ratio: 14/15;
   width: 420px;
+  aspect-ratio: 14/15;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -585,7 +632,7 @@ html {
 
 .about-us-skill-checkmark-container {
   width: 30px;
-  height: 30px;
+  aspect-ratio: 1/1;
   background-color: #1b1c23;
   display: flex;
   justify-content: center;
@@ -624,19 +671,21 @@ html {
   align-items: center;
 }
 
+.about-us-btn-resume-download {
+  background-color: hsl(68, 100%, 55%);
+  color: #13141a;
+  border: 2px solid hsl(68, 100%, 55%);
+}
+.about-us-btn-resume-download:hover {
+  background-color: transparent;
+  border: 2px solid hsl(68, 100%, 55%);
+  color: hsl(68, 100%, 55%);
+}
+
 .about-us-btn-contact-us {
-  width: 220px;
-  height: 40px;
   border: 2px solid hsl(68, 100%, 55%);
   color: hsl(68, 100%, 55%);
   background-color: transparent;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  text-transform: uppercase;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all ease-in-out 200ms;
 }
 .about-us-btn-contact-us:hover {
   background-color: hsl(68, 100%, 55%);
@@ -670,6 +719,51 @@ html {
     margin: 5px 0;
   }
 }
+@media (max-width: 375px) {
+  .about-us-container {
+    padding: 18vw 0;
+  }
+  .about-us-sub {
+    padding: 7vw 0;
+  }
+  .about-us-page-topic-container {
+    padding-bottom: 10vw;
+  }
+  .about-us-image-container {
+    margin: 0 0 15vw 0;
+  }
+  .about-us-para-container {
+    margin-bottom: 7vw;
+  }
+  .about-us-para {
+    font-size: 4.3vw;
+    text-decoration: none;
+  }
+  .about-us-skill-checkmark-container {
+    width: 8vw;
+  }
+  .about-us-skills-container {
+    margin-bottom: 10vw;
+  }
+  .about-us-skills-topic-container {
+    margin-bottom: 5vw;
+  }
+  .about-us-skills-topic {
+    font-size: 4.5vw;
+  }
+  .about-us-skill-container {
+    margin: 1vw 0;
+  }
+  .about-us-skill-checkmark {
+    font-size: 5vw;
+  }
+  .about-us-skill-name {
+    font-size: 4.3vw;
+  }
+  .about-us-btn-contact-us {
+    margin-top: 5vw;
+  }
+}
 .services-main-container {
   height: auto;
   background-color: #13141a;
@@ -691,7 +785,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
@@ -701,14 +795,15 @@ html {
 
 .service-container {
   width: calc(33.3333333333% - 20px);
-  height: 300px;
+  min-height: 250px;
+  height: auto;
   border-left: 1px solid rgba(255, 255, 255, 0.13);
   border-right: 1px solid rgba(255, 255, 255, 0.13);
   background-color: #13141a;
   margin: 60px 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   cursor: alias;
   transition: all ease-in-out 300ms;
@@ -724,6 +819,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px 0 40px 0;
 }
 
 .service-icon {
@@ -737,14 +833,15 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .service-name {
   font-family: "Poppins", sans-serif;
   color: white;
   text-transform: capitalize;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 400;
   padding: 0;
   margin: 0;
 }
@@ -756,8 +853,8 @@ html {
 
 .service-description {
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 300;
   color: hsla(0, 0%, 100%, 0.72);
   text-align: center;
   padding: 0;
@@ -779,9 +876,39 @@ html {
     width: 100%;
   }
 }
+@media (max-width: 375px) {
+  .services-main-container {
+    padding: 18vw 0;
+  }
+  .services-sub-container {
+    padding: 7vw 0;
+  }
+  .services-page-topic {
+    margin-bottom: 10vw;
+  }
+  .service-container {
+    min-height: 70vw;
+    margin: 15vw 0;
+  }
+  .service-icon-container {
+    margin: 5vw 0 10vw 0;
+  }
+  .service-icon {
+    font-size: 10vw;
+  }
+  .service-name-container {
+    margin-bottom: 7vw;
+  }
+  .service-name {
+    font-size: 4.5vw;
+  }
+  .service-description {
+    font-size: 4.3vw;
+  }
+}
 .clients-main-container {
   height: auto;
-  padding-top: 70px;
+  padding: 70px 0;
   background-color: transparent;
   position: relative;
   z-index: 0;
@@ -851,12 +978,12 @@ html {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  transition: all ease-in-out 500ms;
+  transition: all ease-in-out 300ms;
 }
 
 .client-pic-container {
   width: 150px;
-  height: 150px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   margin: 50px 0;
   display: flex;
@@ -880,7 +1007,8 @@ html {
 .client-review {
   font-family: "Poppins", sans-serif;
   font-style: italic;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 400;
   color: hsla(0, 0%, 100%, 0.72);
   text-align: center;
   padding: 0;
@@ -906,7 +1034,7 @@ html {
 
 .client-name {
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.95);
   text-transform: capitalize;
@@ -924,7 +1052,7 @@ html {
 
 .client-review-source {
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: hsla(0, 0%, 100%, 0.72);
   text-transform: capitalize;
@@ -946,7 +1074,7 @@ html {
 
 .client-selector {
   width: 30px;
-  height: 30px;
+  aspect-ratio: 1/1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -955,7 +1083,7 @@ html {
 
 .client-selector-bg {
   width: 10px;
-  height: 10px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: white;
 }
@@ -964,16 +1092,81 @@ html {
   background-color: hsl(68, 100%, 55%);
 }
 
+@media (min-width: 375px) and (max-width: 770px) {
+  .client-pic-container {
+    width: 130px;
+  }
+  .client-review {
+    font-size: 16px;
+  }
+  .client-name {
+    font-size: 16px;
+  }
+  .client-review-source {
+    font-size: 15px;
+  }
+  .client-pic-container {
+    margin: 45px 0;
+  }
+}
+@media (max-width: 375px) {
+  .clients-main-container {
+    padding: 18vw 0;
+  }
+  .clients-sub-container {
+    padding-top: 5vw;
+  }
+  .client-pic-container {
+    width: 35vw;
+  }
+  .client-review {
+    font-size: 4.3vw;
+  }
+  .client-name {
+    font-size: 4.3vw;
+  }
+  .client-review-source {
+    font-size: 4vw;
+  }
+  .client-pic-container {
+    margin: 15vw 0;
+  }
+  .client-review-container {
+    margin: 5vw 0;
+  }
+  .client-details-container {
+    margin: 5vw 0;
+  }
+  .client-name-container {
+    padding: 1vw 0;
+  }
+  .client-review-source-container {
+    padding: 1vw 0;
+  }
+  .client-selectors-container {
+    margin: 5vw 0;
+  }
+  .client-selectors-container {
+    margin: 5vw 0;
+  }
+  .client-selector {
+    width: 6vw;
+  }
+  .client-selector-bg {
+    width: 50%;
+  }
+}
 .portfolio-main-container {
   height: auto;
   background-color: #13141a;
-  padding: 80px 0 80px 0;
+  padding: 70px 0;
 }
 
 .portfolio-sub-container {
   height: auto;
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
 }
 
 .portfolio-content-container {
@@ -994,7 +1187,7 @@ html {
 .portfolio-filter-btn {
   border: 2px solid white;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   color: white;
   border-radius: 5px;
@@ -1082,29 +1275,12 @@ html {
 .portfolio-bucket-topic {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
-  font-weight: 500;
-  text-align: center;
-  text-transform: capitalize;
-  padding: 0;
-  margin: 0;
-  color: white;
-}
-
-.portfolio-bucket-para-container {
-  width: 100%;
-  height: auto;
-  transition: all ease-in-out 300ms;
-}
-
-.portfolio-bucket-para {
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
   font-weight: 400;
   text-align: center;
   text-transform: capitalize;
   padding: 0;
   margin: 0;
-  color: hsla(0, 0%, 100%, 0.72);
+  color: white;
 }
 
 .portfolio-bucket-icons-container {
@@ -1128,6 +1304,9 @@ html {
   color: white;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                            portfolio fullscreen                            */
+/* -------------------------------------------------------------------------- */
 .portfolio-bucket-pic-fullscreen-main-container {
   width: 100%;
   height: 100vh;
@@ -1316,14 +1495,54 @@ html {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media (min-width: 375px) and (max-width: 575px) {
+  .portfolio-bucket-topic-container {
+    margin-top: -25px;
+  }
+  .portfolio-bucket-topic {
+    font-size: 16px;
+  }
+  .portfolio-bucket-icons-container {
+    margin-bottom: -25px;
+  }
+  .portfolio-bucket-icon {
+    font-size: 20px;
+  }
+}
 @media (max-width: 375px) {
+  .portfolio-main-container {
+    padding: 18vw 0;
+  }
+  .portfolio-sub-container {
+    padding-top: 5vw;
+  }
   .portfolio-bucket {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .portfolio-filter-btn {
+    font-size: 4.3vw;
+    margin: 1vw 5vw;
+  }
+  .portfolio-bucket-topic-container {
+    margin-top: -5.5vw;
+  }
+  .portfolio-bucket-topic {
+    font-size: 5vw;
+  }
+  .portfolio-bucket-icons-container {
+    margin-bottom: -5.5vw;
+  }
+  .portfolio-bucket-icon {
+    font-size: 7vw;
   }
 }
 .blog-main-container {
   background-color: #13141a;
-  padding: 80px 0;
+  padding: 70px 0;
+}
+
+.blog-sub-container {
+  padding-top: 20px;
 }
 
 .blog-page-topic-container {
@@ -1378,8 +1597,8 @@ html {
 
 .blog-title {
   font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   color: white;
   text-transform: capitalize;
   margin: 0;
@@ -1472,10 +1691,40 @@ html {
     width: 100%;
   }
 }
+@media (max-width: 375px) {
+  .blog-main-container {
+    padding: 18vw 0;
+  }
+  .blog-sub-container {
+    padding-top: 5vw;
+  }
+  .blog-title-container {
+    margin-bottom: 4.3vw;
+  }
+  .blog-title {
+    font-size: 4.3vw;
+  }
+  .blog-details-container {
+    font-size: 4vw;
+    margin-bottom: 2vw;
+  }
+  .blog-date-container {
+    margin-right: 3vw;
+  }
+  .blog-para-container {
+    margin-bottom: 2vw;
+  }
+  .blog-para {
+    font-size: 4vw;
+  }
+  .read-more-link {
+    font-size: 4vw;
+  }
+}
 .contact-main-container {
   background-color: #13141a;
   height: auto;
-  padding: 80px 0;
+  padding: 70px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1487,6 +1736,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
 }
 
 .contact-page-topic-container {
@@ -1511,8 +1761,8 @@ html {
 }
 
 .contact-detail-container {
-  width: 33.3333333333%;
-  height: 160px;
+  min-width: 33.3333333333%;
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1527,7 +1777,7 @@ html {
 
 .contact-detail-icon-container {
   width: 50px;
-  height: 50px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.2);
   display: flex;
@@ -1626,19 +1876,16 @@ html {
 }
 
 .form-submit-btn {
-  width: 170px;
-  height: 40px;
   background-color: hsl(68, 100%, 55%);
   color: #13141a;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border: 2px solid hsl(68, 100%, 55%);
   margin-top: 70px;
-  margin-left: calc(100% - 170px);
+  margin-left: calc(100% - 220px);
+}
+.form-submit-btn:hover {
+  background-color: transparent;
+  border: 2px solid hsl(68, 100%, 55%);
+  color: hsl(68, 100%, 55%);
 }
 
 @media (max-width: 990px) {
@@ -1653,7 +1900,7 @@ html {
   }
   .contact-detail-container {
     width: 100%;
-    height: 160px;
+    min-height: 160px;
     margin: 10px 0;
   }
   .contact-form {
@@ -1664,6 +1911,53 @@ html {
   }
   .customer-email {
     width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .contact-main-container {
+    padding: 18vw 0;
+  }
+  .contact-sub-container {
+    padding-top: 5vw;
+  }
+  .contact-page-topic-container {
+    margin-bottom: 20vw;
+  }
+  .contact-detail-container {
+    min-height: 40vw;
+    margin: 2vw 0;
+  }
+  .contact-detail-icon-container {
+    width: 13vw;
+    margin-bottom: 5vw;
+  }
+  .contact-detail-icon {
+    font-size: 7vw;
+  }
+  .contact-detail-method {
+    font-size: 4.3vw;
+  }
+  .contact-detail-text {
+    font-size: 4vw;
+  }
+  .input-common {
+    font-size: 4vw;
+    padding-left: 2vw;
+  }
+  .customer-name {
+    height: 12vw;
+    margin-bottom: 5vw;
+  }
+  .customer-email {
+    height: 12vw;
+    margin-bottom: 5vw;
+  }
+  .customer-msg {
+    height: 65vw;
+  }
+  .form-submit-btn {
+    margin-top: 16vw;
+    margin-left: calc(100% - 55vw);
   }
 }
 .suc-body {
